@@ -1,0 +1,26 @@
+.title {
+    color: #FFF ;
+    font-family: 'Silkscreen', cursive;
+    margin: 0 ;
+    text-align: center;
+    margin-top: 60px;
+    
+}
+body {
+    background-image:url("./background.png");
+    background-repeat: no-repeat; 
+    width: 100%; 
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.content {
+   padding-bottom: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
