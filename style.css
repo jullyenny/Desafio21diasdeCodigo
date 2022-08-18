@@ -1,26 +1,95 @@
 .title {
-    color: #FFF ;
-    font-family: 'Silkscreen', cursive;
-    margin: 0 ;
-    text-align: center;
-    margin-top: 60px;
-    
+  color: #fff;
+  font-family: "Silkscreen", cursive;
+  margin: 0;
+  text-align: center;
+  margin-top: 60px;
 }
 body {
-    background-image:url("./background.png");
-    background-repeat: no-repeat; 
-    width: 100%; 
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  background-image: url("./background.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
 }
 .content {
-   padding-bottom: 120px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  
+}
+.button {
+    
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  background: #a42d70;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  padding: 10px 20px 10px;
+  flex-direction: row;
+  background: linear-gradient(90deg, #a42d70 0%, #a42d70 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(103, 19, 60, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+ position: relative;
+  padding: 10px;
+}
+.button:hover,
+.button:focus {
+  color: #fff;
+  transform: translateY(-6px);
+}
+button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #ef75c4;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+.content-button{
+  
+    width: 100px;
+    align-items: center;
+display: flex;
+flex-direction: row;
+justify-content: center;
+padding: 15px 100px 0px;
+}
+.content-principal{
+    margin-bottom: 100px;
 }
