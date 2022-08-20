@@ -100,3 +100,24 @@ body {
   grid-column: -2;
   grid-row: 2 / span 4;
 }
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+
+
+}
+.button button {
+  color: #fff;
+background-color: #8257E6 ;
+padding: 15px;
+border-radius: 5px;
+width: 150px;
+font-size: 20px;
+text-align: center;
+cursor: pointer;
+}
+.button button:hover {
+  background-color: #633BBC;
+}
