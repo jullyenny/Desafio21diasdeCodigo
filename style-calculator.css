@@ -37,7 +37,7 @@ body {
   box-sizing: inherit;
 }
 .container {
-  width: 380px;
+  width: 360px;
   height: 480px;
   
 }
@@ -46,7 +46,7 @@ body {
   box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
   margin-left: auto;
   margin-right: auto;
-  width: 380px;
+  width: 360px;
   height: 480px;
   overflow: hidden;
   display: flex;
