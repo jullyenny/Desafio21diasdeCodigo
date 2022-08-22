@@ -1,5 +1,5 @@
 .title {
-  color: #fff;
+  color: #2B236B;
   font-family: "Silkscreen", cursive;
   margin: 0;
   text-align: center;
@@ -92,4 +92,79 @@ padding: 15px 100px 0px;
 }
 .content-principal{
     margin-bottom: 100px;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.wrapper .box {
+  position: relative;
+  width: 340px;
+  height: 400px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left:1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  transform-style: preserve-3d;
+  transform: perspective(800px) 
+  }
+  .description {
+    color:#fff;
+    font-family: "Silkscreen", cursive;
+    text-align: justify;
+    padding: 20px;
+  }
+  p{
+    color:#fff;
+    font-family: "Silkscreen", cursive;
+    text-align: justify;
+}
+ul{
+  list-style: none;
+  width:100%;
+  display: flex;
+  padding:1px;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+ul a {
+  color: white;
+  text-decoration: none;
+}
+li{
+  cursor: pointer;
+align-items: center;
+display: flex;flex-direction: column;
+gap: 5px;
+
+}
+i{
+  color:#fff;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+li:hover .fa-github{
+  transform:translate3d(0,-10px,20px);
+  color:gray;
+}
+li:hover .fa-linkedin{
+  transform:translate3d(0,-10px,20px);
+  color:#077099;
+}
+li:hover .fa-instagram{
+  transform:translate3d(0,-10px,20px);
+  color:#b71787;
 }
