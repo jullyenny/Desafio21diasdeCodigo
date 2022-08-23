@@ -34,8 +34,76 @@
       <div class="content-button">
        <button onclick="window.open('/calculator.html','_self')" class="button"> Calcular rota</a>
       </div>
+      <h1 class="title-count"> Dias para lançamento</h1>
+      <div class="content-count">
+        <div >
+          <h1 id="day"></h1>
+          <span>Dias</span>
+        </div>
+        <div >
+        <h1 id="hour"></h1>
+        <span>Horas</span>
+        </div>
+        <div>
+          <h1 id="minute"></h1>
+          <span>Minutos</span>
+        </div>
+        <div>
+          <h1 id="second"></h1>
+          <span>Segundos</span>
+        </div>
+      </div>
+      
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="/script-glass.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const dayField = document.getElementById("day")
+const hourField = document.getElementById("hour")
+const minuteField = document.getElementById("minute")
+const secondField = document.getElementById("second")
+
+let interval;
+const eventDay = moment("2022-09-05")
+
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
+
+const countDownFn = () => {
+  const today = moment();
+  const timeSpan = eventDay.diff(today);
+  
+  if(timeSpan<= -today){
+    console.log ("evento encerrado");
+    clearInterval (interval);
+    return;
+  } else if (timeSpan<=0){
+    console.log ("o evento é hoje")
+    clearInterval(interval);
+    return;
+  } else {
+    const days = Math.floor(timeSpan/day);
+    const hours = Math.floor((timeSpan % day)/hour);
+    const minutes = Math.floor((timeSpan % hour)/minute);
+    const seconds = Math.floor((timeSpan % minute)/second);
+
+    dayField.innerHTML = days;
+    hourField.innerHTML = hours;
+    minuteField.innerHTML = minutes;
+    secondField.innerHTML = seconds;
+
+  }
+}
+
+interval = setInterval(countDownFn, second)
+    </script>
   </body>
 </html>
