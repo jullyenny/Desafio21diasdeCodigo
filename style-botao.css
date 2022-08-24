@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    --bg: #ffffff;
+    --bg-panel: #ebebeb;
+    --color-headings: #0077ff;
+    --color-text: #333333;
+    --bg-shadow:  -2px -2px 8px rgb(255,255,255,1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, .3);
+    --bg-slider: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, .3),
+    2px 2px 8px rgba(0, 0, 0, .3);
+    --bg-before: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, .3);
+    --bg-bolinha: #ecf0f3;
+    --bg-image:url('https://cdn.wallpapersafari.com/62/54/n3846z.jpg');
+}
+
+body{
+   background-image: var(--bg-image);
+    font-family: sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.box {
+
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--bg-shadow);
+
+}
+.switch {
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+
+}
+.switch input {
+    display: none;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0px solid #ecf0f3;
+    border-radius: 20px;
+    box-shadow: var(--bg-slider);
+    
+}
+.slider:before {
+    position: absolute;
+    bottom: 3px;
+    left: 11px;
+    z-index: 999;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: var(--bg-before);
+    background-color: var(--bg-bolinha);
+    transition: .5s;
+    content: "";
+  }
+  .off {
+    position: absolute;
+    right: 12px;
+    color: #3d3935;
+    font-size: 12px;
+    text-align: center;
+  }
+  .on {
+    position: absolute;
+    left: 14px;
+    color: #f252a5;
+    font-size: 12px;
+    text-align: center;
+  }
+  input:checked + .slider:before {
+    transform: translateX(33px);
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav {
+    margin-top: 55px;
+    width: 350px;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('https://www.seekpng.com/png/full/6-60432_space-shuttle-png-image-space-rocket-rocket-png.png');
+  }

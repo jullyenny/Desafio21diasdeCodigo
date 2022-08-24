@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-botao.css" />
+    <title>toggle</title>
+  </head>
+  <body>
+    <div class="center">
+      <div class="nav"></div>
+      <div id="container">
+        <div class="box">
+          <label class="switch">
+            <input type="checkbox" name="theme" />
+            <span class="slider"></span>
+            <span class="on">ON</span>
+            <span class="off">OFF</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const html = document.querySelector("html");
+      const checkbox = document.querySelector("input[type=checkbox]");
+
+      const getStyle = (element, style) =>
+        window.getComputedStyle(element).getPropertyValue(style);
+
+      const initialColors = {
+        bg: getStyle(html, "--bg"),
+        bgPanel: getStyle(html, "--bg-panel"),
+        colorHeadings: getStyle(html, "--color-headings"),
+        colorText: getStyle(html, "--color-text"),
+        bgShadow: getStyle(html, "--bg-shadow"),
+        bgSlider: getStyle(html, "--bg-slider"),
+        bgBefore: getStyle(html, "--bg-before"),
+        bgBolinha: getStyle(html, "--bg-bolinha"),
+        bgImage: getStyle(html, "--bg-image"),
+      };
+
+      const darkMode = {
+        bg: "#333333",
+
+        bgPanel: "#434343",
+        colorHeadings: "#3664ff",
+        colorText: "#b5b5b5",
+        bgShadow:
+          "-2px -2px 8px rgb(0,0,0, 0.01),-2px -2px 12px rgba(0, 0, 0, 0.05), inset 2px 2px 4px rgba(0, 0, 0, 0.01), 2px 2px 8px rgba(0, 0, 0, 0.3)",
+        bgSlider:
+          "-2px -2px 8px rgb(0,0,0, 0.01), -2px -2px 12px rgba(0, 0, 0, 0.05), inset -2px -2px 8px rgba(0, 0, 0, 0.1), inset -2px -2px 12px rgba(0, 0, 0, 0.3), inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.03), 2px 2px 8px rgba(0, 0, 0, 0.03)",
+        bgBefore:
+          "-2px -2px 8px rgba(0, 0, 0, 0.01), -2px -2px 12px rgba(0, 0, 0, 0.05),inset 2px 2px 4px rgba(0, 0, 0, 0.1), 2px 2px 8px rgba(0, 0, 0, .3)",
+        bgBolinha: "rgb(0, 0, 0, 0.4)",
+        bgImage: "url('https://wallpapercave.com/wp/wp6846159.jpg')",
+      };
+
+      const transformKey = (key) =>
+        "--" + key.replace(/([A-Z])/, "-$1").toLowerCase();
+
+      const changeColors = (colors) => {
+        Object.keys(colors).map((key) =>
+          html.style.setProperty(transformKey(key), colors[key])
+        );
+      };
+
+      changeColors(initialColors);
+
+      checkbox.addEventListener("change", ({ target }) => {
+        target.checked ? changeColors(darkMode) : changeColors(initialColors);
+      });
+    </script>
+  </body>
+</html>
