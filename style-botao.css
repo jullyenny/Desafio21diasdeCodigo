@@ -125,3 +125,24 @@ body{
     background-size: contain;
     background-image: url('https://www.seekpng.com/png/full/6-60432_space-shuttle-png-image-space-rocket-rocket-png.png');
   }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  
+  
+  }
+  .button button {
+    color: black;
+  background-color: white ;
+  padding: 15px;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  }
+  .button button:hover {
+    background-color: #bcbabc;
+  }
