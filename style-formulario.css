@@ -103,3 +103,24 @@
   button:hover {
     background-color: #bcbabc;
   }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  
+  
+  }
+  .button button {
+    color: black;
+  background-color: white ;
+  padding: 15px;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  }
+  .button button:hover {
+    background-color: #bcbabc;
+  }
