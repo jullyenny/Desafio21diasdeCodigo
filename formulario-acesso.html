@@ -7,11 +7,36 @@
     rel="stylesheet"
   />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/f1fa35c00c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style-formulario.css">
     <title>Formulário de Acesso</title>
+    <script src="./script-menu.js"></script>
 </head>
 <body>
     <main>
+      <div class="content">
+        <div class="frame">
+            <div onclick="openAndCloseMenu()">
+                <span class="btn-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+            </div>
+           <div class="content-menu">
+            <a target="_blank" href="https://github.com/jullyenny" class="btn">
+                <i class="fab fa-github" style="color: #3b5998;"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/jully-enny-souza-569561171/" class="btn">
+                <i class="fab fa-instagram" style="color: #00acee;"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/jully-enny-souza-569561171/" class="btn">
+                <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+            </a>
+            <a target="_blank" href="mailto:jullyenny67@gmail.com" class="btn">
+                <i class="far fa-envelope"></i>
+            </a>
+           </div>
+        </div>
+    </div>
         <div id="container">
           <form action="">
             <img src="/user.png"><br>
@@ -22,8 +47,9 @@
           </form>
         </div>
         <div onclick="window.open('/gallery.html','_self')" class="button"> <button> Galeria </button></div>
-
-        </main>
+        
+      </main>
+       
 </body>
 </html>
 
